@@ -11,7 +11,7 @@ Se basa en el trabajo realizado en el marco del proyecto [Unlocking the Colonial
 ### Instalación de herramientas
 Para realizar este taller es necesario instalar las siguientes herramientas:
 
-- (OpenRefine 3.6.0)[https://github.com/OpenRefine/OpenRefine/releases/tag/3.6.0]
+- [OpenRefine 3.6.0](https://github.com/OpenRefine/OpenRefine/releases/tag/3.6.0)
 - Extensión [RDF Transform](https://openrefine.org/extensions), se descarga y se descomprime en la carpeta webapp/extensions de la carpeta de instalación de OpenRefine
 
 Los Jupyter Notebooks se pueden ejecutar en un navegador sin necesidad de instalar ningún software adicional. Sin embargo, para desarrollar y ejecutar los Jupyter Notebooks en un ordenador personal es necesario instalar:
