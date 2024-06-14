@@ -14,7 +14,7 @@ Para realizar este taller es necesario instalar las siguientes herramientas:
 - [OpenRefine 3.6.0](https://github.com/OpenRefine/OpenRefine/releases/tag/3.6.0)
 - Extensión [RDF Transform](https://openrefine.org/extensions), se descarga y se descomprime en la carpeta webapp/extensions de la carpeta de instalación de OpenRefine
 
-Los Jupyter Notebooks se pueden ejecutar en un navegador sin necesidad de instalar ningún software adicional. Sin embargo, para desarrollar y ejecutar los Jupyter Notebooks en un ordenador personal es necesario instalar:
+Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegador sin necesidad de instalar ningún software adicional. Sin embargo, para desarrollar y ejecutar los Jupyter Notebooks en un ordenador personal es necesario instalar:
 
 - [Anaconda](https://www.anaconda.com/download)
 
