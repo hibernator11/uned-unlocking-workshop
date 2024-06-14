@@ -8,7 +8,7 @@ Se basa en el trabajo realizado en el marco del proyecto [Unlocking the Colonial
 ### Colección de datos
 
 
-### Instalación
+### Instalación de herramientas
 
 
 ### Actividades
