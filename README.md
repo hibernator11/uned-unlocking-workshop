@@ -11,6 +11,8 @@ Para este taller se han seleccionado un subconjunto de la colección [Relaciones
 
 En concreto se han seleccionado [10 obras](input/manifests.txt) a través de sus manifests en formato JSON.
 
+<img src="images/mapas.png" width="50%">
+
 ### Instalación de herramientas
 Para realizar este taller es necesario instalar las siguientes herramientas:
 
