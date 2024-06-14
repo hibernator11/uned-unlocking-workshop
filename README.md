@@ -9,7 +9,7 @@ Se basa en el trabajo realizado en el marco del proyecto [Unlocking the Colonial
 
 Para este taller se han seleccionado un subconjunto de la colección [Relaciones Geográficas of Mexico and Guatemala](https://collections.lib.utexas.edu/?f%5Bmods_relatedItem_titleInfo_title_source_t%5D%5B%5D=Relaciones+Geogr%C3%A1ficas+of+Mexico+and+Guatemala) proporcionada por Benson Latin American Collection, LLILAS Benson Latin American Studies and Collections, The University of Texas at Austin. 
 
-En concreto se han seleccionado [10 obras](input/manifests.txt) a través de sus manifests en formato JSON.
+En concreto se han seleccionado [10 obras](input/manifests.txt) a través de sus manifests en formato JSON. La licencia de las obras es https://creativecommons.org/publicdomain/mark/1.0/.
 
 <img src="images/mapas.png" width="50%">
 
