@@ -37,3 +37,4 @@ Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegado
 ### Referencias
 
 - Gustavo Candela, Javier Pereda, Dolores Sáez, Pilar Escobar, Alexander Sánchez, Andrés Villa Torres, Albert A. Palacios, Kelly McDonough, and Patricia Murrieta-Flores. 2023. An Ontological Approach for Unlocking the Colonial Archive. J. Comput. Cult. Herit. 16, 4, Article 74 (December 2023), 18 pages. https://doi.org/10.1145/3594727
+- Seth van Hooland, Ruben Verborgh, y Max De Wilde, "Limpieza de datos con OpenRefine", traducido por María-Jesús Colmenero-Ruiz, Programming Historian en español 1 (2017), https://doi.org/10.46430/phes0017
