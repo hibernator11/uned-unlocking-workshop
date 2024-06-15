@@ -28,9 +28,11 @@ Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegado
 
 1. En primer lugar, ejecuta el Jupyter Notebook [Extraccion_UCA2CSV.ipynb](https://nbviewer.org/github/hibernator11/uned-unlocking-workshop/blob/main/Extraccion_UCA2CSV.ipynb) que transforma los datos originales (manifests en Json) a un fichero CSV (fichero de texto con columnas separadas por comas). Un fichero CSV es posible procesarlo fácilmente con la librería [pandas](https://pandas.pydata.org/).
 
-2. El segundo paso consiste en modelar los datos extraídos con el vocabulario [Schema.org](https://schema.org) que proporciona clases y propiedades para describir los recursos.
+2. El segundo paso consiste en modelar los datos extraídos con el vocabulario [Schema.org](https://schema.org) que proporciona clases y propiedades para describir los recursos. Para ello utilizamos la herramienta OpenRefine para leer el fichero CSV y generar como resultado un fichero en formato RDF.
 
 <img src="images/modelado.png" width="50%">
+
+3. El tercer paso se basa en la reutilización de los datos generados en el paso anterior.
 
 ### Referencias
 
