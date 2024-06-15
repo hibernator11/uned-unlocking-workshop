@@ -24,9 +24,9 @@ Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegado
 - [Anaconda](https://www.anaconda.com/download)
 
 
-
 ### Actividades
 
+En primer lugar, ejecuta el Jupyter Notebook que transforma los datos originales (manifests en Json) a un fichero CSV (fichero de texto con columnas separadas por comas). Un fichero CSV es posible procesarlo fácilmente con la librería [pandas](https://pandas.pydata.org/).
 
 ### Referencias
 
