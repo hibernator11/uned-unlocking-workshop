@@ -26,7 +26,7 @@ Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegado
 
 ### Actividades
 
-1. En primer lugar, ejecuta el Jupyter Notebook [Extraccion_UCA2CSV](https://github.com/hibernator11/uned-unlocking-workshop/blob/main/Extraccion_UCA2CSV.ipynb) que transforma los datos originales (manifests en Json) a un fichero CSV (fichero de texto con columnas separadas por comas). Un fichero CSV es posible procesarlo fácilmente con la librería [pandas](https://pandas.pydata.org/). [Ver Extraccion_UCA2CSV](https://nbviewer.org/github/hibernator11/uned-unlocking-workshop/blob/main/Extraccion_UCA2CSV.ipynb)
+1. En primer lugar, ejecuta el Jupyter Notebook [Extraccion_UCA2CSV.ipynb](https://nbviewer.org/github/hibernator11/uned-unlocking-workshop/blob/main/Extraccion_UCA2CSV.ipynb) que transforma los datos originales (manifests en Json) a un fichero CSV (fichero de texto con columnas separadas por comas). Un fichero CSV es posible procesarlo fácilmente con la librería [pandas](https://pandas.pydata.org/). 
 
 ### Referencias
 
