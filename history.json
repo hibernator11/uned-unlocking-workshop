@@ -1,0 +1,2422 @@
+[
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "title"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "title"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.2.1",
+      "baseIRI": "http://127.0.0.1:3333/",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "https://schema.org/",
+        "ex": "http://example/"
+      },
+      "subjectMappings": [
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'mapa/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "CreativeWork"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "titulo"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "dateCreated"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "fecha"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "thumbnailURL"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "thumbnail"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "license"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "licencia"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "spatial"
+              },
+              "objectMappings": [
+                {
+                  "prefix": "ex",
+                  "valueSource": {
+                    "source": "row_index"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "'lugar/'+value"
+                  },
+                  "valueType": {
+                    "type": "iri"
+                  },
+                  "typeMappings": [],
+                  "propertyMappings": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prefix": "ex",
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "'lugar/'+row.index"
+          },
+          "typeMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Place"
+              }
+            }
+          ],
+          "propertyMappings": [
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "name"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "lugar"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "latitute"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(0,value.indexOf(','))"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "schema",
+              "valueSource": {
+                "source": "constant",
+                "constant": "longitude"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "coordenadas"
+                  },
+                  "expression": {
+                    "language": "grel",
+                    "code": "value.substring(value.indexOf(',')+2)"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
