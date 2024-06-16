@@ -1,0 +1,149 @@
+@prefix :       <http://127.0.0.1:3333/> .
+@prefix ex:     <http://example/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example/lugar/3>
+        rdf:type          schema:Place ;
+        schema:latitute   "14.539595" ;
+        schema:longitude  "-91.41645" ;
+        schema:name       "GT| Diocese of Guatemala| San Antonio Suchitepéquez, Suchitepéquez, Guatemala" .
+
+<http://example/lugar/9>
+        rdf:type          schema:Place ;
+        schema:latitute   "19.339773" ;
+        schema:longitude  "-99.107265" ;
+        schema:name       "MX| Archdiocese of Mexico| Culhuacán, State of Mexico, Mexico" .
+
+<http://example/mapa/3>
+        rdf:type             schema:CreativeWork ;
+        schema:dateCreated   "1579-11-22" ;
+        schema:license       "https://creativecommons.org/publicdomain/mark/1.0/" ;
+        schema:name          "Pintura de Zapotitlan" ;
+        schema:spatial       <http://example/lugar/3> ;
+        schema:thumbnailURL  "https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_32713c87-b23c-474c-acb9-0757bc1d2dd3/TN/utblac_32713c87-b23c-474c-acb9-0757bc1d2dd3.jpg" .
+
+<http://example/mapa/9>
+        rdf:type             schema:CreativeWork ;
+        schema:dateCreated   "1580-01-17" ;
+        schema:license       "https://creativecommons.org/publicdomain/mark/1.0/" ;
+        schema:name          "Pintura de Culhuacan" ;
+        schema:spatial       <http://example/lugar/9> ;
+        schema:thumbnailURL  "https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_d5ddf214-248e-462f-acdc-81d27463226f/TN/utblac_d5ddf214-248e-462f-acdc-81d27463226f.jpg" .
+
+<http://example/lugar/2>
+        rdf:type          schema:Place ;
+        schema:latitute   "19.062581" ;
+        schema:longitude  "-98.306357" ;
+        schema:name       "MX| Diocese of Tlaxcala| Cholula de Rivadabia, Puebla, Mexico" .
+
+<http://example/lugar/8>
+        rdf:type          schema:Place ;
+        schema:latitute   "18.147329" ;
+        schema:longitude  "-94.416455" ;
+        schema:name       "MX| Diocese of Oaxaca| Coatzacoalcos, Veracruz, Mexico" .
+
+<http://example/mapa/2>
+        rdf:type             schema:CreativeWork ;
+        schema:dateCreated   "1580-11-30" ;
+        schema:license       "https://creativecommons.org/publicdomain/mark/1.0/" ;
+        schema:name          "Pintura de Cholula" ;
+        schema:spatial       <http://example/lugar/2> ;
+        schema:thumbnailURL  "https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_90dca2a6-6851-4d2b-b6c9-9fc2b75104b7/TN/utblac_90dca2a6-6851-4d2b-b6c9-9fc2b75104b7.jpg" .
+
+<http://example/mapa/8>
+        rdf:type             schema:CreativeWork ;
+        schema:dateCreated   "1580-04-29" ;
+        schema:license       "https://creativecommons.org/publicdomain/mark/1.0/" ;
+        schema:name          "Pintura de Coatzacualco" ;
+        schema:spatial       <http://example/lugar/8> ;
+        schema:thumbnailURL  "https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_9a78720b-d927-4635-bdc0-9993a3024f9a/TN/utblac_9a78720b-d927-4635-bdc0-9993a3024f9a.jpg" .
+
+<http://example/lugar/1>
+        rdf:type          schema:Place ;
+        schema:latitute   "18.266262" ;
+        schema:longitude  "-97.147278" ;
+        schema:name       "MX| Diocese of Tlaxcala| Coxcatlán, Puebla, Mexico" .
+
+<http://example/lugar/7>
+        rdf:type          schema:Place ;
+        schema:latitute   "19.06939" ;
+        schema:longitude  "-99.611873" ;
+        schema:name       "MX| Archdiocese of Mexico| San Bartolomé Atlatlahuca, State of Mexico, Mexico" .
+
+<http://example/mapa/1>
+        rdf:type             schema:CreativeWork ;
+        schema:dateCreated   "1580-10-26" ;
+        schema:license       "https://creativecommons.org/publicdomain/mark/1.0/" ;
+        schema:name          "Pintura de Cuzcatlan" ;
+        schema:spatial       <http://example/lugar/1> ;
+        schema:thumbnailURL  "https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_e38f8f71-f967-46fb-9493-1edec8cbc1b3/TN/utblac_e38f8f71-f967-46fb-9493-1edec8cbc1b3.jpg" .
+
+<http://example/mapa/7>
+        rdf:type             schema:CreativeWork ;
+        schema:dateCreated   "1580-09-17" ;
+        schema:license       "https://creativecommons.org/publicdomain/mark/1.0/" ;
+        schema:name          "Pintura de Atlatlauhca" ;
+        schema:spatial       <http://example/lugar/7> ;
+        schema:thumbnailURL  "https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_4283412f-28f4-4452-a1fd-0faef9ed2fcb/TN/utblac_4283412f-28f4-4452-a1fd-0faef9ed2fcb.jpg" .
+
+<http://example/lugar/0>
+        rdf:type          schema:Place ;
+        schema:latitute   "20.547647" ;
+        schema:longitude  "-104.04662" ;
+        schema:name       "MX| Diocese of Guadalajara| Ameca, Jalisco, Mexico" .
+
+<http://example/lugar/6>
+        rdf:type          schema:Place ;
+        schema:latitute   "19.915595" ;
+        schema:longitude  "-98.668525" ;
+        schema:name       "MX| Archdiocese of Mexico| Zempoala, Hidalgo, Mexico" .
+
+<http://example/mapa/0>
+        rdf:type             schema:CreativeWork ;
+        schema:dateCreated   "1579-10-02" ;
+        schema:license       "https://creativecommons.org/publicdomain/mark/1.0/" ;
+        schema:name          "Pintura de Ameca" ;
+        schema:spatial       <http://example/lugar/0> ;
+        schema:thumbnailURL  "https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_38127378-7a33-412f-a425-cc511ff1d351/TN/utblac_38127378-7a33-412f-a425-cc511ff1d351.jpg" .
+
+<http://example/mapa/6>
+        rdf:type             schema:CreativeWork ;
+        schema:dateCreated   "1580-11-01" ;
+        schema:license       "https://creativecommons.org/publicdomain/mark/1.0/" ;
+        schema:name          "Pintura de Cempoala" ;
+        schema:spatial       <http://example/lugar/6> ;
+        schema:thumbnailURL  "https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_b35a74c8-358b-4192-8c61-9668332985dd/TN/utblac_b35a74c8-358b-4192-8c61-9668332985dd.jpg" .
+
+<http://example/lugar/5>
+        rdf:type          schema:Place ;
+        schema:latitute   "20.176589" ;
+        schema:longitude  "-99.332347" ;
+        schema:name       "MX| Archdiocese of Mexico| Atengo, Hidalgo, Mexico| Mixquiahuala de Juárez, Hidalgo, Mexico" .
+
+<http://example/mapa/5>
+        rdf:type             schema:CreativeWork ;
+        schema:dateCreated   "1579-10-08" ;
+        schema:license       "https://creativecommons.org/publicdomain/mark/1.0/" ;
+        schema:name          "Pintura de Atengo y Misquiahuala" ;
+        schema:spatial       <http://example/lugar/5> ;
+        schema:thumbnailURL  "https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_d6360c5d-e505-49af-84a3-b2538f7be43b/TN/utblac_d6360c5d-e505-49af-84a3-b2538f7be43b.jpg" .
+
+<http://example/lugar/4>
+        rdf:type          schema:Place ;
+        schema:latitute   "18.883171" ;
+        schema:longitude  "-98.866007" ;
+        schema:name       "MX| Archdiocese of Mexico| Yecapixtla, Morelos, Mexico" .
+
+<http://example/mapa/4>
+        rdf:type             schema:CreativeWork ;
+        schema:dateCreated   "1580-10-10" ;
+        schema:license       "https://creativecommons.org/publicdomain/mark/1.0/" ;
+        schema:name          "Pintura de Acapistla" ;
+        schema:spatial       <http://example/lugar/4> ;
+        schema:thumbnailURL  "https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_9202cf3b-3a38-4498-89bc-67d0b03e9509/TN/utblac_9202cf3b-3a38-4498-89bc-67d0b03e9509.jpg" .
