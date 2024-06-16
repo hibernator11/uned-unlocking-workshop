@@ -1,3 +1,7 @@
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hibernator11/uned-unlocking-workshop/HEAD)
+
+
 # Humanidades Digitales y descolonización
 Este proyecto forma parte de los [Cursos de Verano UNED - 35.ª edición, Humanidades Digitales y descolonización](https://extension.uned.es/actividad/idactividad/36411).
 
