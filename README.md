@@ -32,6 +32,8 @@ Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegado
 
 <img src="images/modelado.png" width="50%">
 
+El fichero [openrefine/history.json](openrefine/history.json) incluye los pasos necesarios para transformar los datos proporcionados en el fichero CSV a RDF utilizando el vocabulario Schema.org.
+
 3. El tercer paso se basa en la reutilización de los datos generados en el paso anterior.
 
 ### Referencias
