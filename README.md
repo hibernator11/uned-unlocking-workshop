@@ -28,11 +28,9 @@ Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegado
 
 1. En primer lugar, ejecuta el Jupyter Notebook [notebooks/Extraccion_UCA2CSV.ipynb](https://nbviewer.org/github/hibernator11/uned-unlocking-workshop/blob/main/notebooks/Extraccion_UCA2CSV.ipynb) que transforma los datos originales (manifests en formato original JSON) a un fichero CSV (fichero de texto con columnas separadas por comas). Un fichero CSV es posible procesarlo fácilmente con la librería [pandas](https://pandas.pydata.org/).
 
-2. El segundo paso consiste en modelar los datos extraídos con el vocabulario [Schema.org](https://schema.org) que proporciona clases y propiedades para describir los recursos. Para ello utilizamos la herramienta OpenRefine para leer el fichero CSV y generar como resultado un fichero en formato RDF.
+2. El segundo paso consiste en modelar los datos extraídos con el vocabulario [Schema.org](https://schema.org) que proporciona clases y propiedades para describir los recursos. Para ello utilizamos la herramienta OpenRefine para leer el fichero CSV y generar como resultado un fichero en formato RDF.El fichero [openrefine/history.json](openrefine/history.json) incluye los pasos necesarios para transformar los datos proporcionados en el fichero CSV a RDF utilizando el vocabulario Schema.org. Como resultado obtenemos el fichero [output/UNED_metadatos_csv.ttl](output/UNED_metadatos_csv.ttl)
 
 <img src="images/modelado2.png" width="50%">
-
-El fichero [openrefine/history.json](openrefine/history.json) incluye los pasos necesarios para transformar los datos proporcionados en el fichero CSV a RDF utilizando el vocabulario Schema.org. Como resultado obtenemos el fichero [output/UNED_metadatos_csv.ttl](output/UNED_metadatos_csv.ttl)
 
 3. El tercer paso se basa en la reutilización de los datos generados en el paso anterior. El notebook [notebooks/SPARQLAnalysisDataset.ipynb](https://nbviewer.org/github/hibernator11/uned-unlocking-workshop/blob/main/notebooks/SPARQLAnalysisDataset.ipynb) muestra algunos ejemplos para consultar el repositorio generado.
 
