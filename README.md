@@ -30,7 +30,7 @@ Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegado
 
 2. El segundo paso consiste en modelar los datos extraídos con el vocabulario [Schema.org](https://schema.org) que proporciona clases y propiedades para describir los recursos. Para ello utilizamos la herramienta OpenRefine para leer el fichero CSV y generar como resultado un fichero en formato RDF.
 
-<img src="images/modelado.png" width="50%">
+<img src="images/modelado2.png" width="50%">
 
 El fichero [openrefine/history.json](openrefine/history.json) incluye los pasos necesarios para transformar los datos proporcionados en el fichero CSV a RDF utilizando el vocabulario Schema.org.
 
