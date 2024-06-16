@@ -38,6 +38,11 @@ Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegado
 
 3. El tercer paso se basa en la reutilización de los datos generados en el paso anterior. El notebook [notebooks/SPARQLAnalysisDataset.ipynb](https://nbviewer.org/github/hibernator11/uned-unlocking-workshop/blob/main/notebooks/SPARQLAnalysisDataset.ipynb) muestra algunos ejemplos para consultar el repositorio generado.
 
+
+### Licencia y términos de uso
+
+Esta obra está bajo una [Licencia Creative Commons Atribución 4.0 Internacional](http://creativecommons.org/licenses/by/4.0/).
+
 ### Referencias
 
 - Gustavo Candela, Javier Pereda, Dolores Sáez, Pilar Escobar, Alexander Sánchez, Andrés Villa Torres, Albert A. Palacios, Kelly McDonough, and Patricia Murrieta-Flores. 2023. An Ontological Approach for Unlocking the Colonial Archive. J. Comput. Cult. Herit. 16, 4, Article 74 (December 2023), 18 pages. https://doi.org/10.1145/3594727
