@@ -34,7 +34,7 @@ Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegado
 
 El fichero [openrefine/history.json](openrefine/history.json) incluye los pasos necesarios para transformar los datos proporcionados en el fichero CSV a RDF utilizando el vocabulario Schema.org. Como resultado obtenemos el fichero [output/UNED_metadatos_csv.ttl](output/UNED_metadatos_csv.ttl)
 
-3. El tercer paso se basa en la reutilización de los datos generados en el paso anterior.
+3. El tercer paso se basa en la reutilización de los datos generados en el paso anterior. El notebook [notebooks/SPARQLAnalysisDataset.ipynb](https://nbviewer.org/github/hibernator11/uned-unlocking-workshop/blob/main/notebooks/SPARQLAnalysisDataset.ipynb) muestra algunos ejemplos para consultar el repositorio generado.
 
 ### Referencias
 
