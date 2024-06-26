@@ -21,7 +21,7 @@ En concreto se han seleccionado [10 obras](input/manifests.txt) a través de sus
 Para realizar este taller es necesario instalar las siguientes herramientas:
 
 - [OpenRefine 3.6.0](https://github.com/OpenRefine/OpenRefine/releases/tag/3.6.0)
-- Extensión [RDF Transform](https://openrefine.org/extensions), se descarga y se descomprime en la carpeta webapp/extensions de la carpeta de instalación de OpenRefine
+- Extensión [RDF Transform]([https://openrefine.org/extensions](https://github.com/AtesComp/rdf-transform/releases/download/v2.2.2/rdf-transform-2.2.2.zip)), se descarga y se descomprime en la carpeta webapp/extensions de la carpeta de instalación de OpenRefine
 
 Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegador (p.ej. utilizando [Binder](https://mybinder.org/)) sin necesidad de instalar ningún software adicional. Sin embargo, para desarrollar y ejecutar los Jupyter Notebooks en un ordenador personal es necesario instalar:
 
