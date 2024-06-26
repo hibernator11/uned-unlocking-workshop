@@ -36,7 +36,7 @@ Los Jupyter Notebooks incluidos en este taller se pueden ejecutar en un navegado
 
 <img src="images/modelado2.png" width="50%">
 
-*Nota:* De forma opcional, y en el caso que la aplicación openrefine no funcione correctamente, es posible ejecutar el código del notebook [notebooks/CSVtoRDF.ipynb](https://nbviewer.org/github/hibernator11/uned-unlocking-workshop/blob/main/notebooks/CSVtoRDF.ipynb) 
+**Nota:** De forma opcional, y en el caso que la aplicación openrefine no funcione correctamente, es posible ejecutar el código del notebook [notebooks/CSVtoRDF.ipynb](https://nbviewer.org/github/hibernator11/uned-unlocking-workshop/blob/main/notebooks/CSVtoRDF.ipynb) 
 
 3. El tercer paso se basa en la reutilización de los datos generados en el paso anterior. El notebook [notebooks/SPARQLAnalysisDataset.ipynb](https://nbviewer.org/github/hibernator11/uned-unlocking-workshop/blob/main/notebooks/SPARQLAnalysisDataset.ipynb) muestra algunos ejemplos para consultar el repositorio generado.
 
