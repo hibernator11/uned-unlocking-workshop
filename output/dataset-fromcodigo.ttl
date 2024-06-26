@@ -1,0 +1,73 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix schema: <https://schema.org/> .
+
+<https://example.org/1> a schema:CreativeWork ;
+    dc:title "Pintura de Ameca" ;
+    schema:dateCreated "1579-10-02" ;
+    schema:license <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    schema:name "Pintura de Ameca" ;
+    schema:thumbnail <https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_38127378-7a33-412f-a425-cc511ff1d351/TN/utblac_38127378-7a33-412f-a425-cc511ff1d351.jpg> .
+
+<https://example.org/10> a schema:CreativeWork ;
+    dc:title "Pintura de Culhuacan" ;
+    schema:dateCreated "1580-01-17" ;
+    schema:license <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    schema:name "Pintura de Culhuacan" ;
+    schema:thumbnail <https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_d5ddf214-248e-462f-acdc-81d27463226f/TN/utblac_d5ddf214-248e-462f-acdc-81d27463226f.jpg> .
+
+<https://example.org/2> a schema:CreativeWork ;
+    dc:title "Pintura de Cuzcatlan" ;
+    schema:dateCreated "1580-10-26" ;
+    schema:license <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    schema:name "Pintura de Cuzcatlan" ;
+    schema:thumbnail <https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_e38f8f71-f967-46fb-9493-1edec8cbc1b3/TN/utblac_e38f8f71-f967-46fb-9493-1edec8cbc1b3.jpg> .
+
+<https://example.org/3> a schema:CreativeWork ;
+    dc:title "Pintura de Cholula" ;
+    schema:dateCreated "1580-11-30" ;
+    schema:license <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    schema:name "Pintura de Cholula" ;
+    schema:thumbnail <https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_90dca2a6-6851-4d2b-b6c9-9fc2b75104b7/TN/utblac_90dca2a6-6851-4d2b-b6c9-9fc2b75104b7.jpg> .
+
+<https://example.org/4> a schema:CreativeWork ;
+    dc:title "Pintura de Zapotitlan" ;
+    schema:dateCreated "1579-11-22" ;
+    schema:license <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    schema:name "Pintura de Zapotitlan" ;
+    schema:thumbnail <https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_32713c87-b23c-474c-acb9-0757bc1d2dd3/TN/utblac_32713c87-b23c-474c-acb9-0757bc1d2dd3.jpg> .
+
+<https://example.org/5> a schema:CreativeWork ;
+    dc:title "Pintura de Acapistla" ;
+    schema:dateCreated "1580-10-10" ;
+    schema:license <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    schema:name "Pintura de Acapistla" ;
+    schema:thumbnail <https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_9202cf3b-3a38-4498-89bc-67d0b03e9509/TN/utblac_9202cf3b-3a38-4498-89bc-67d0b03e9509.jpg> .
+
+<https://example.org/6> a schema:CreativeWork ;
+    dc:title "Pintura de Atengo y Misquiahuala" ;
+    schema:dateCreated "1579-10-08" ;
+    schema:license <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    schema:name "Pintura de Atengo y Misquiahuala" ;
+    schema:thumbnail <https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_d6360c5d-e505-49af-84a3-b2538f7be43b/TN/utblac_d6360c5d-e505-49af-84a3-b2538f7be43b.jpg> .
+
+<https://example.org/7> a schema:CreativeWork ;
+    dc:title "Pintura de Cempoala" ;
+    schema:dateCreated "1580-11-01" ;
+    schema:license <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    schema:name "Pintura de Cempoala" ;
+    schema:thumbnail <https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_b35a74c8-358b-4192-8c61-9668332985dd/TN/utblac_b35a74c8-358b-4192-8c61-9668332985dd.jpg> .
+
+<https://example.org/8> a schema:CreativeWork ;
+    dc:title "Pintura de Atlatlauhca" ;
+    schema:dateCreated "1580-09-17" ;
+    schema:license <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    schema:name "Pintura de Atlatlauhca" ;
+    schema:thumbnail <https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_4283412f-28f4-4452-a1fd-0faef9ed2fcb/TN/utblac_4283412f-28f4-4452-a1fd-0faef9ed2fcb.jpg> .
+
+<https://example.org/9> a schema:CreativeWork ;
+    dc:title "Pintura de Coatzacualco" ;
+    schema:dateCreated "1580-04-29" ;
+    schema:license <https://creativecommons.org/publicdomain/mark/1.0/> ;
+    schema:name "Pintura de Coatzacualco" ;
+    schema:thumbnail <https://curio.lib.utexas.edu/assets/DAMS/utblac/utblac_9a78720b-d927-4635-bdc0-9993a3024f9a/TN/utblac_9a78720b-d927-4635-bdc0-9993a3024f9a.jpg> .
+
